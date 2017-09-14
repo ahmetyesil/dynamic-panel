@@ -2,12 +2,41 @@
   <nav class="sidebar-nav">
     <ul class="nav">
       <li class="nav-item">
-        <a class="nav-link" routerLinkActive="active" [routerLink]="['/index']"><i class="icon-home"></i> Anasayfa <span class="badge badge-info">NEW</span></a>
+        <a class="nav-link" routerLinkActive="active" [routerLink]="['/index']"><i class="icon-home"></i> ANASAYFA <span class="badge badge-info">NEW</span></a>
       </li>
       <li class="nav-item" style="display: none;">
         <a class="nav-link" routerLinkActive="active" [routerLink]="['/dashboard']"><i class="icon-speedometer"></i> Dashboard <span class="badge badge-info">NEW</span></a>
       </li>
-      <li class="divider" style="display: none;"></li>
+
+      <li class="nav-item nav-dropdown" routerLinkActive="open" appNavDropdown>
+        <a class="nav-link nav-dropdown-toggle" href="#" appNavDropdownToggle><i class="fa fa-user-secret"></i> YÖNETİCİLER</a>
+        <ul class="nav-dropdown-items">
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" [routerLink]="['/admin/create']"><i class="fa fa-plus"></i> Yönetici Oluştur</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" [routerLink]="['/admin']"><i class="fa fa-list"></i> Yönetici Listesi<span class="badge badge-secondary">10</span></a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="nav-item nav-dropdown" routerLinkActive="open" appNavDropdown>
+        <a class="nav-link nav-dropdown-toggle" href="#" appNavDropdownToggle><i class="fa fa-building"></i> BAYİLER</a>
+        <ul class="nav-dropdown-items">
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" [routerLink]="['/client/create']"><i class="fa fa-plus"></i> Yeni Bayi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" [routerLink]="['/client']"><i class="fa fa-list"></i> Bayi Listesi<span class="badge badge-secondary">10</span></a>
+          </li>
+        </ul>
+      </li>
+
+
+
+
+
+
       <li class="nav-title" style="display: none;">
         UI Elements
       </li>
