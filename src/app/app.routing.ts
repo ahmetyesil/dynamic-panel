@@ -10,7 +10,7 @@ import {
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'index',
     pathMatch: 'full',
   },
   {
@@ -20,6 +20,10 @@ export const routes: Routes = [
       title: 'Home'
     },
     children: [
+        {
+            path: 'index',
+            loadChildren: './views/index/index.module#IndexModule'
+        },
       {
         path: 'dashboard',
         loadChildren: './views/dashboard/dashboard.module#DashboardModule'
