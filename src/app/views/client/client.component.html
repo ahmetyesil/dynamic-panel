@@ -1,0 +1,378 @@
+<div class="animated fadeIn">
+
+    <div class="row form-group">
+        <div class="col-md-3">
+            <div class="input-group">
+                <input type="text" id="input1-group2" name="input1-group2" class="form-control" placeholder="BAYİ ARA">
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-secondary"><i class="fa fa-search"></i></button>
+                  </span>
+            </div>
+
+        </div>
+        <div class="col-md-9">
+            <button class="btn btn-success pull-right" (click)="clientCreate.show()"><i class="fa fa-plus"></i> YENİ
+                BAYİ EKLE
+            </button>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card bg-default">
+                <div class="card-body pb-0">
+                    <div class="btn-group float-right" dropdown>
+                        <button type="button" class="btn btn-transparent dropdown-toggle p-0" dropdownToggle>
+                            <i class="fa fa-edit"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right" *dropdownMenu>
+                            <button class="dropdown-item" (click)="clientUpdate.show()">Bilgileri güncelle</button>
+                            <a class="dropdown-item" routerLinkActive="active"  [routerLink]="['/user/id']">Kullanıcı bilgisi</a>
+                        </div>
+                    </div>
+                    <h4 class="mb-0">XYZ Metal Alüminyum</h4>
+                    <a href="#">xyzmetal.com.tr</a>
+                </div>
+                <hr>
+                <div class="px-3 margin-bottom-30">
+                    <h6 class="margin-bottom-10 pull-left">Modül Listesi </h6>
+                    <button class="btn btn-sm btn-success pull-right" (click)="moduleCreate.show()"><i
+                            class="fa fa-plus"></i>YENİ MODÜL OLUŞTUR
+                    </button>
+                    <div class="clearfix margin-bottom-10"></div>
+                    <div class="height-300 overflow-scroll">
+                    <table class="table table-bordered table-striped table-condensed">
+                       <tbody>
+                        <tr>
+                            <td width="60"><span class="badge badge-success">Aktif</span></td>
+                            <td>Anasayfa</td>
+                            <td width="40">
+                                <button (click)="lists.show()" class="btn btn-sm btn-secondary pull-right"><i
+                                        class="fa fa-list"></i></button>
+                            </td>
+                            <td width="40">
+                                <button  (click)="moduleUpdate.show()"
+                                        class="btn btn-sm btn-primary pull-right"><i
+                                        class="fa fa-pencil "></i></button>
+                            </td>
+                            <td width="40">
+                                <a href="#"  class="btn btn-sm btn-danger pull-right"><i  class="fa fa-remove"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="60"><span class="badge badge-success">Aktif</span></td>
+                            <td>Kurumsal</td>
+                            <td width="40">
+                                <button (click)="lists.show()" class="btn btn-sm btn-secondary pull-right"><i
+                                        class="fa fa-list"></i></button>
+                            </td>
+                            <td width="40">
+                                <button (click)="moduleUpdate.show()"
+                                        class="btn btn-sm btn-primary pull-right"><i
+                                        class="fa fa-pencil "></i></button>
+                            </td>
+                            <td width="40">
+                                <a href="#"  class="btn btn-sm btn-danger pull-right"><i  class="fa fa-remove"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="60"><span class="badge badge-success">Aktif</span></td>
+                            <td>Ürünler</td>
+                            <td width="40">
+                                <button (click)="lists.show()" class="btn btn-sm btn-secondary pull-right"><i
+                                        class="fa fa-list"></i></button>
+                            </td>
+                            <td width="40">
+                                <button (click)="moduleUpdate.show()"
+                                        class="btn btn-sm btn-primary pull-right"><i
+                                        class="fa fa-pencil "></i></button>
+                            </td>
+                            <td width="40">
+                                <a href="#"  class="btn btn-sm btn-danger pull-right"><i  class="fa fa-remove"></i></a>
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div><!--/.col-->
+
+
+    </div><!--/.row-->
+</div>
+
+
+<!-- /.ClientCreate START -->
+<div bsModal #clientCreate="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <form action="" method="post" class="form-horizontal">
+                <div class="modal-header">
+                    <h4 class="modal-title">BAYİ EKLE</h4>
+                    <button type="button" class="close" (click)="clientCreate.hide()" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <label>BAYİ ADI</label>
+                            <input type="text" class="form-control" placeholder="Örn: xyz bilişim a.ş">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <label>WEBSİTE</label>
+                            <input type="text" class="form-control" placeholder="www.xyz.com">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-6">
+                            <label>YETKİLİ ADI</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-6">
+                            <label>EMAİL</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-6">
+                            <label>ŞİFRE</label>
+                            <input type="password" class="form-control">
+                        </div>
+                        <div class="col-6">
+                            <label>ŞİFRE (TEKRAR)</label>
+                            <input type="password" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <label>ADRES</label>
+                            <textarea class="form-control"></textarea>
+                        </div>
+
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-6">
+                            <label>Şehir</label>
+                            <select class="form-control">
+                                <option value="0">Seçiniz</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <label>İlçe</label>
+                            <select class="form-control">
+                                <option value="0">Seçiniz</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" (click)="clientCreate.hide()">İPTAL</button>
+                    <button type="button" class="btn btn-primary">BAYİ OLUŞTUR</button>
+                </div>
+            </form>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<!-- /.ClientCreate END -->
+
+<!-- /.ClientUpdate START -->
+<div bsModal #clientUpdate="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <form action="" method="post" class="form-horizontal">
+                <div class="modal-header">
+                    <h4 class="modal-title">BAYİ GÜNCELLE</h4>
+                    <button type="button" class="close" (click)="clientUpdate.hide()" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <label>BAYİ ADI</label>
+                            <input type="text" class="form-control" placeholder="Örn: xyz bilişim a.ş">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <label>WEBSİTE</label>
+                            <input type="text" class="form-control" placeholder="www.xyz.com">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-6">
+                            <label>YETKİLİ ADI</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-6">
+                            <label>EMAİL</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-6">
+                            <label>ŞİFRE</label>
+                            <input type="password" class="form-control">
+                        </div>
+                        <div class="col-6">
+                            <label>ŞİFRE (TEKRAR)</label>
+                            <input type="password" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <label>ADRES</label>
+                            <textarea class="form-control"></textarea>
+                        </div>
+
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-6">
+                            <label>Şehir</label>
+                            <select class="form-control">
+                                <option value="0">Seçiniz</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <label>İlçe</label>
+                            <select class="form-control">
+                                <option value="0">Seçiniz</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" (click)="clientUpdate.hide()">İPTAL</button>
+                    <button type="button" class="btn btn-primary">BAYİ GÜNCELLE</button>
+                </div>
+            </form>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<!-- /.ClientUpdate END -->
+
+<!-- /.ModuleCreate START -->
+<div bsModal #moduleCreate="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <form action="" method="post" class="form-horizontal">
+                <div class="modal-header">
+                    <h4 class="modal-title">MODÜL EKLE</h4>
+                    <button type="button" class="close" (click)="moduleCreate.hide()" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="form-group row">
+                        <div class="col-md-10 col-sm-8">
+                            <label>MODÜL ADI</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-md-2 col-sm-4">
+                            <label>AKTİF Mİ</label>
+                            <div class="clearfix"></div>
+                            <label class="switch switch-lg switch-icon switch-success-outline-alt">
+                                <input type="checkbox" class="switch-input" checked>
+                                <span class="switch-label" data-on="&#xf00c;" data-off="&#xf00d;"></span>
+                                <span class="switch-handle"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" (click)="moduleCreate.hide()">İPTAL</button>
+                    <button type="button" class="btn btn-primary">MODÜL OLUŞTUR</button>
+                </div>
+            </form>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<!-- /.ModuleCreate END -->
+
+<!-- /.ModuleUpdate START -->
+<div bsModal #moduleUpdate="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <form action="" method="post" class="form-horizontal">
+                <div class="modal-header">
+                    <h4 class="modal-title">MODÜL GÜNCELLE</h4>
+                    <button type="button" class="close" (click)="moduleUpdate.hide()" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="form-group row">
+                        <div class="col-md-10 col-sm-8">
+                            <label>MODÜL ADI</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-md-2 col-sm-4">
+                            <label>AKTİF Mİ</label>
+                            <div class="clearfix"></div>
+                            <label class="switch switch-lg switch-icon switch-success-outline-alt">
+                                <input type="checkbox" class="switch-input" checked>
+                                <span class="switch-label" data-on="&#xf00c;" data-off="&#xf00d;"></span>
+                                <span class="switch-handle"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" (click)="moduleUpdate.hide()">İPTAL</button>
+                    <button type="button" class="btn btn-primary">MODÜL GÜNCELLE</button>
+                </div>
+            </form>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<!-- /.ModuleUpdate START -->
+
+<!-- /.Lists START -->
+<div bsModal #lists="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">LİSTELER</h4>
+                    <button type="button" class="close" (click)="lists.hide()" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="list-group height-300 overflow-scroll">
+                        <a routerLinkActive="active"  [routerLink]="['/client/list/id']" class="list-group-item"><i class="fa fa-list"></i> Slider  </a>
+                        <a routerLinkActive="active"  [routerLink]="['/client/list/id']" class="list-group-item"><i class="fa fa-list"></i> Öne çıkan ürünler  </a>
+                        <a routerLinkActive="active"  [routerLink]="['/client/list/id']" class="list-group-item"><i class="fa fa-list"></i> Footer Açıklamaları  </a>
+                    </div>
+
+                </div>
+
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<!-- /.Lists END -->

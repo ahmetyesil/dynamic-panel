@@ -1,0 +1,257 @@
+<div class="animated fadeIn">
+
+    <div class="row form-group">
+        <div class="col-md-3">
+
+        </div>
+        <div class="col-md-9">
+            <button class="btn btn-success pull-right" (click)="rowCreate.show()"><i class="fa fa-plus"></i>
+               YENİ SATIR EKLE
+            </button>
+            <button class="btn btn-primary margin-right-10 pull-right" (click)="columnCreate.show()"><i class="fa fa-plus"></i>
+                YENİ SÜTUN EKLE
+            </button>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fa fa-align-justify"></i> <a href="#"> Xyz Bilişim a.ş</a> / Slider
+                </div>
+                <div class="card-block">
+                    <table class="table table-bordered table-striped table-condensed">
+                        <thead>
+                        <tr>
+                            <th>Username</th>
+                            <th>Date registered</th>
+                            <th>Role</th>
+                            <th>Status</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Vishnu Serghei</td>
+                            <td>2012/01/01</td>
+                            <td>Member</td>
+                            <td>
+                                <span class="tag tag-success">Active</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Zbyněk Phoibos</td>
+                            <td>2012/02/01</td>
+                            <td>Staff</td>
+                            <td>
+                                <span class="tag tag-danger">Banned</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Einar Randall</td>
+                            <td>2012/02/01</td>
+                            <td>Admin</td>
+                            <td>
+                                <span class="tag tag-default">Inactive</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Félix Troels</td>
+                            <td>2012/03/01</td>
+                            <td>Member</td>
+                            <td>
+                                <span class="tag tag-warning">Pending</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Aulus Agmundr</td>
+                            <td>2012/01/21</td>
+                            <td>Staff</td>
+                            <td>
+                                <span class="tag tag-success">Active</span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <nav>
+                        <ul class="pagination">
+                            <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+                            <li class="page-item active">
+                                <a class="page-link" href="#">1</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+
+    </div><!--/.row-->
+</div>
+
+
+<!-- /.ColumnCreate START -->
+<div bsModal #columnCreate="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+
+        <div class="modal-content min-height-500">
+            <div class="modal-header">
+                <h4 class="modal-title">YENİ SÜTUN EKLE</h4>
+                <button type="button" class="close" (click)="columnCreate.hide()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+          <div class="modal-body">
+              <div class="row">
+                  <div class="col-md-4">
+                      <form action="" method="post" class="form-horizontal">
+                          <div class="modal-body">
+
+                              <div class="form-group row">
+                                  <div class="col-12">
+                                      <label>FORM</label>
+                                      <input type="text" class="form-control">
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <div class="col-12">
+                                      <label>FORM</label>
+                                      <select id="drpKontroller" class="form-control">
+                                          <option value="0">Kontrol seçiniz</option>
+                                          <option value="text">Text</option>
+                                          <option value="textarea">TextArea</option>
+                                          <option value="editor">Editor</option>
+                                          <option value="listbox">Listbox(Çoklu seçim)</option>
+                                          <option value="dropdown">Dropdown</option>
+                                          <option value="image_upload">Resim yükle</option>
+                                          <option value="multi_image_upload">Çoklu resim yükle</option>
+                                          <option value="file_upload">Dosya yükle</option>
+                                          <option value="status">Durum</option>
+                                      </select>
+                                  </div>
+                              </div>
+
+
+                          </div>
+                          <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" (click)="columnCreate.hide()">İPTAL</button>
+                              <button type="button" class="btn btn-primary">KAYDET</button>
+                          </div>
+                      </form>
+                  </div>
+                  <div class="col-md-8">
+
+                      <table class="table table-bordered table-striped table-condensed">
+                          <thead>
+                          <tr>
+                              <th>Username</th>
+                              <th>Date registered</th>
+                              <th>Role</th>
+                              <th>Status</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr>
+                              <td>Vishnu Serghei</td>
+                              <td>2012/01/01</td>
+                              <td>Member</td>
+                              <td>
+                                  <span class="tag tag-success">Active</span>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>Zbyněk Phoibos</td>
+                              <td>2012/02/01</td>
+                              <td>Staff</td>
+                              <td>
+                                  <span class="tag tag-danger">Banned</span>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>Einar Randall</td>
+                              <td>2012/02/01</td>
+                              <td>Admin</td>
+                              <td>
+                                  <span class="tag tag-default">Inactive</span>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>Félix Troels</td>
+                              <td>2012/03/01</td>
+                              <td>Member</td>
+                              <td>
+                                  <span class="tag tag-warning">Pending</span>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>Aulus Agmundr</td>
+                              <td>2012/01/21</td>
+                              <td>Staff</td>
+                              <td>
+                                  <span class="tag tag-success">Active</span>
+                              </td>
+                          </tr>
+                          </tbody>
+                      </table>
+
+                  </div>
+              </div>
+          </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<!-- /.ColumnCreate END -->
+
+
+
+<!-- /.RowCreate START -->
+<div bsModal #rowCreate="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <form action="" method="post" class="form-horizontal">
+                <div class="modal-header">
+                    <h4 class="modal-title">YENİ SATIR EKLE</h4>
+                    <button type="button" class="close" (click)="rowCreate.hide()" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <label>FORM</label>
+                            <input type="text" class="form-control" placeholder="Örn: xyz bilişim a.ş">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <label>FORM</label>
+                            <input type="text" class="form-control" placeholder="www.xyz.com">
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" (click)="rowCreate.hide()">İPTAL</button>
+                    <button type="button" class="btn btn-primary">KAYDET</button>
+                </div>
+            </form>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<!-- /.RowCreate END -->
+
+
+
+
+
+

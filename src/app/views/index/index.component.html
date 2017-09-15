@@ -37,17 +37,80 @@
         <div class="px-3 margin-bottom-30">
           <h6 class="margin-bottom-10">Modül Listesi </h6>
 
-          <div class="list-group height-300 overflow-scroll">
-            <a href="#" class="list-group-item">Slider  <i class="fa fa-pencil pull-right"></i></a>
-            <a href="#" class="list-group-item">Kategoriler <i class="fa fa-pencil pull-right"></i> </a>
-            <a href="#" class="list-group-item">Ürünler <i class="fa fa-pencil pull-right"></i> </a>
-            <a href="#" class="list-group-item">Galeri <i class="fa fa-pencil pull-right"></i></a>
-            <a href="#" class="list-group-item">Sıkça Sorulan Sorular  <i class="fa fa-pencil pull-right"></i></a>
-            <a href="#" class="list-group-item">Sözleşmeler <i class="fa fa-pencil pull-right"></i></a>
-            <a href="#" class="list-group-item">Kurumsal <i class="fa fa-pencil pull-right"></i></a>
-            <a href="#" class="list-group-item">Basında biz <i class="fa fa-pencil pull-right"></i></a>
-            <a href="#" class="list-group-item">Sertifikalar <i class="fa fa-pencil pull-right"></i></a>
-          </div>
+          <ul class="list-group height-300 overflow-scroll">
+            <li class="list-group-item"><label class="pull-left margin-top-5"><span
+                    class="badge badge-success">Aktif</span> Slider</label> <a href="#"
+                                                                               class="btn btn-sm btn-danger pull-right"><i
+                    class="fa fa-remove"></i></a>
+              <button (click)="moduleUpdate.show()"
+                      class="margin-right-10 btn btn-sm btn-primary pull-right"><i
+                      class="fa fa-pencil "></i></button>
+            </li>
+            <li class="list-group-item"><label class="pull-left margin-top-5"><span
+                    class="badge badge-secondary">Pasif</span> Kategoriler</label> <a href="#"
+                                                                                      class="btn btn-sm btn-danger pull-right"><i
+                    class="fa fa-remove"></i></a>
+              <button (click)="moduleUpdate.show()"
+                      class="margin-right-10 btn btn-sm btn-primary pull-right"><i
+                      class="fa fa-pencil "></i></button>
+            </li>
+            <li class="list-group-item"><label class="pull-left margin-top-5"><span
+                    class="badge badge-success">Aktif</span> Ürünler</label> <a href="#"
+                                                                                class="btn btn-sm btn-danger pull-right"><i
+                    class="fa fa-remove"></i></a>
+              <button (click)="moduleUpdate.show()"
+                      class="margin-right-10 btn btn-sm btn-primary pull-right"><i
+                      class="fa fa-pencil "></i></button>
+            </li>
+            <li class="list-group-item"><label class="pull-left margin-top-5"><span
+                    class="badge badge-success">Aktif</span> Galeri</label> <a href="#"
+                                                                               class="btn btn-sm btn-danger pull-right"><i
+                    class="fa fa-remove"></i></a>
+              <button (click)="moduleUpdate.show()"
+                      class="margin-right-10 btn btn-sm btn-primary pull-right"><i
+                      class="fa fa-pencil "></i></button>
+            </li>
+            <li class="list-group-item"><label class="pull-left margin-top-5"><span
+                    class="badge badge-success">Aktif</span> Sıkça Sorulan Sorular </label> <a href="#"
+                                                                                               class="btn btn-sm btn-danger pull-right"><i
+                    class="fa fa-remove"></i></a>
+              <button (click)="moduleUpdate.show()"
+                      class="margin-right-10 btn btn-sm btn-primary pull-right"><i
+                      class="fa fa-pencil "></i></button>
+            </li>
+            <li class="list-group-item"><label class="pull-left margin-top-5"><span
+                    class="badge badge-success">Aktif</span> Sözleşmeler</label> <a href="#"
+                                                                                    class="btn btn-sm btn-danger pull-right"><i
+                    class="fa fa-remove"></i></a>
+              <button (click)="moduleUpdate.show()"
+                      class="margin-right-10 btn btn-sm btn-primary pull-right"><i
+                      class="fa fa-pencil "></i></button>
+            </li>
+            <li class="list-group-item"><label class="pull-left margin-top-5"><span
+                    class="badge badge-success">Aktif</span> Kurumsal</label> <a href="#"
+                                                                                 class="btn btn-sm btn-danger pull-right"><i
+                    class="fa fa-remove"></i></a>
+              <button (click)="moduleUpdate.show()"
+                      class="margin-right-10 btn btn-sm btn-primary pull-right"><i
+                      class="fa fa-pencil "></i></button>
+            </li>
+            <li class="list-group-item"><label class="pull-left margin-top-5"><span
+                    class="badge badge-success">Aktif</span> Basında Biz</label> <a href="#"
+                                                                                    class="btn btn-sm btn-danger pull-right"><i
+                    class="fa fa-remove"></i></a>
+              <button (click)="moduleUpdate.show()"
+                      class="margin-right-10 btn btn-sm btn-primary pull-right"><i
+                      class="fa fa-pencil "></i></button>
+            </li>
+            <li class="list-group-item"><label class="pull-left margin-top-5"><span
+                    class="badge badge-success">Aktif</span> Sertifikalar</label> <a href="#"
+                                                                                     class="btn btn-sm btn-danger pull-right"><i
+                    class="fa fa-remove"></i></a>
+              <button (click)="moduleUpdate.show()"
+                      class="margin-right-10 btn btn-sm btn-primary pull-right"><i
+                      class="fa fa-pencil "></i></button>
+            </li>
+          </ul>
         </div>
       </div>
     </div><!--/.col-->
